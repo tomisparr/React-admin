@@ -1,0 +1,31 @@
+@import url('https://fonts.gooleapis.com/css2?family=Source+Sans+pro:wght@400;600;700&display=swap');
+
+html,
+body,
+#root,
+.app,
+.content{
+  height: 100%;
+  width: 100%;
+  font-family: 'source san pro',sans-serif;
+}
+
+.app{
+  display: flex;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+/* Track */
+  ::-webkit-scrollbar-track {
+    background: #888;
+  }
+
+  /* Handle on Hover */
+  ::-webkit-scrollbar-track:hover {
+    background: #555;
+  } 
