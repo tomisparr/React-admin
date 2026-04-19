@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Sidebar, Menu, MenuItem,} from "react-pro-sidebar";
-import { ProSidebarProvider } from "react-pro-sidebar";
 import { Box, IconButton, Typography,useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import { tokens } from "../../../theme";
@@ -30,20 +29,21 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
       style={{ color: colors.gray[100] }}
       onClick={() => setSelected(title)}
       icon={icon}
+        component={<Link to={to} />}
     >
       <Typography>{title}</Typography>
-      <Link to={to} />
     </MenuItem>
+    
   );
 };
 const SidebarComponent = () =>{
     const theme = useTheme ();
-    const colors = tokens(theme. palette.mode);
+    const colors = tokens(theme.palette.mode);
     const [isCollapsed,setIscollapsed] = useState(false);
     const [selected,setSelected] = useState ("Dashboard");
     
     return (
-                 <ProSidebarProvider>
+                 
                     <Box
             sx={{
                     "& .pro-sidebar-inner": {
@@ -212,11 +212,7 @@ const SidebarComponent = () =>{
 
                     </Menu>
                     </Sidebar>
-                
-        
             </Box>
-                
-            </ProSidebarProvider>
     );
 };
 

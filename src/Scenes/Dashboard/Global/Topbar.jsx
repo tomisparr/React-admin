@@ -1,7 +1,7 @@
 import { Box, IconButton, useTheme,} from "@mui/material";
 import { useContext,} from "react";
 import { tokens } from "../../../theme";
-import { colorModeContext } from "../../../theme";
+import { ColorModeContext } from "../../../theme";
 import  InputBase  from "@mui/material/InputBase";
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
@@ -13,7 +13,7 @@ import SearchIcon from '@mui/icons-material/Search';
 const Topbar = () =>{
     const Theme = useTheme();
     const colors = tokens ( Theme.palette.mode);
-    const colorMode = useContext (colorModeContext);
+    const colorMode = useContext (ColorModeContext);
 
     return (
         <Box display="flex" justifyContent="space-between" p={1}>
